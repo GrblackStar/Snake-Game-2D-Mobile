@@ -87,8 +87,7 @@ public class BodyPart : MonoBehaviour
 
     public void UpdatePosition()
     {
-        //gameObject.transform.position += (Vector3)dPosition;
-        gameObject.transform.position += (Vector3)dPosition/2;
+        gameObject.transform.position += (Vector3)dPosition;
     }
 
     public void UpdateDirection()

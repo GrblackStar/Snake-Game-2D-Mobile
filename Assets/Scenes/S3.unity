@@ -356,7 +356,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.81285715, y: 1.4442858}
+    oldSize: {x: 1.4225, y: 2.5275}
     newSize: {x: 0.81285715, y: 1.4442858}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -426,7 +426,7 @@ Transform:
   m_GameObject: {fileID: 487763846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.49, y: -1.98, z: -0.01}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13073a49b82e8049967233ebf3e30ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snakeSpeed: 1
+  snakeSpeed: 1.833
   enemySpeed: 1
   eggPosition: {fileID: 1611781422}
   bodyPrefab: {fileID: 4664151881947958061, guid: a11aa8f98bf6b5b45b00151d0f5a53e0, type: 3}
@@ -1528,7 +1528,7 @@ Transform:
   m_GameObject: {fileID: 1895556921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -8}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1600,18 +1600,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00077457726, y: 0.3682705}
+  m_Offset: {x: 0.0032608435, y: 0.23106672}
   m_SpriteTilingProperty:
-    border: {x: 0.28, y: 0.32999998, z: 0.26999998, w: 0.22999999}
+    border: {x: 0.18666667, y: 0.22, z: 0.18, w: 0.15333334}
     pivot: {x: 0.51090693, y: 0.4702188}
-    oldSize: {x: 1.4, y: 1.88}
+    oldSize: {x: 0.93333334, y: 1.2533333}
     newSize: {x: 0.42, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62812686, y: 0.1163879}
+  m_Size: {x: 0.40214407, y: 0.10831711}
   m_EdgeRadius: 0
 --- !u!82 &1895556927
 AudioSource:

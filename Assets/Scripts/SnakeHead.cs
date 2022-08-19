@@ -144,7 +144,7 @@ public class SnakeHead : BodyPart
 
         ResetMemory();
 
-        partsToAdd = 4;
+        partsToAdd = 2;
         addTimer = TIMETOADDBODYPART;
     }
 

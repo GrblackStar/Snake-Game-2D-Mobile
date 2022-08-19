@@ -201,7 +201,7 @@ public class GameController : MonoBehaviour
         noOfEggsForNextLevel = 4 + (level * 2);
         //noOfEggsForNextLevel = 1;
 
-        snakeSpeed = 2f + (level/4f);
+        snakeSpeed = 1.5f + (level/3f);
         enemy.objectSpeed = 0.5f + (level / 4f);
         //enemy.objectSpeed = 0;
         if (snakeSpeed > 6)
