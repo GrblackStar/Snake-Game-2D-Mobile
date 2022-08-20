@@ -17,6 +17,12 @@ public class GameController : MonoBehaviour
     public GameObject eggPosition = null;
 
 
+    //prevent swapwning:
+    // GameObject -> Egg currentEgg;
+    public Collider2D[] colliders;
+    public float radius = 0.4f ;
+
+
     public BodyPart   bodyPrefab = null;
     public GameObject rockPrefab = null;
     public GameObject eggPrefab = null;
@@ -86,10 +92,10 @@ public class GameController : MonoBehaviour
         CreateWalls();
         CreateObsticles();
 
-       /* foreach (Vector3 i in positions)
+        if(positions.Count >= 23)
         {
-            Debug.Log(positions);
-        }*/
+            Debug.Log("obsticles created");
+        }
 
         alive = false;
     }
@@ -385,12 +391,13 @@ public class GameController : MonoBehaviour
         position = new Vector3(3.48f, 1.63f, -0.01f);
         GameObject iceberg = Instantiate(icebergPrefab, position, Quaternion.Euler(0, 0, 0));
         iceberg.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
+
 
         position = new Vector3(9.15f, -2.17f, -0.01f);
         GameObject iceberg1 = Instantiate(icebergPrefab, position, Quaternion.Euler(0, 0, 0));
         iceberg.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
@@ -398,17 +405,17 @@ public class GameController : MonoBehaviour
         position = new Vector3(-7.48f, 4.35f, -0.01f);
         GameObject icicle = Instantiate(iciclePrefab, position, Quaternion.Euler(0, 0, 0));
         icicle.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(6.71f, 3.73f, -0.01f);
         GameObject icicle1 = Instantiate(iciclePrefab, position, Quaternion.Euler(0, 0, 0));
         icicle.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-8.86f, -4.62f, -0.01f);
         GameObject icicle2 = Instantiate(iciclePrefab, position, Quaternion.Euler(0, 0, 0));
         icicle.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
@@ -416,17 +423,17 @@ public class GameController : MonoBehaviour
         position = new Vector3(9.693334f, 0.3019454f, -0.01f);
         GameObject mountain = Instantiate(mountainPrefab, position, Quaternion.Euler(0, 0, 0));
         mountain.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-9.72f, -0.68f, -0.01f);
         GameObject mountain1 = Instantiate(mountainPrefab, position, Quaternion.Euler(0, 0, 0));
         mountain.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-0.18f, 5.38f, -0.01f);
         GameObject mountain2 = Instantiate(mountainPrefab, position, Quaternion.Euler(0, 0, 0));
         mountain.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
@@ -434,27 +441,27 @@ public class GameController : MonoBehaviour
         position = new Vector3(-10.16f, 5.26f, -0.01f);
         GameObject stone = Instantiate(stonePrefab, position, Quaternion.Euler(0, 0, 0));
         stone.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-3.67f, 4.28f, -0.01f);
         GameObject stone1 = Instantiate(stonePrefab, position, Quaternion.Euler(0, 0, 0));
         stone.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(1.99f, 3.92f, -0.01f);
         GameObject ston2e = Instantiate(stonePrefab, position, Quaternion.Euler(0, 0, 0));
         stone.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-2.51f, 0.33f, -0.01f);
         GameObject stone4 = Instantiate(stonePrefab, position, Quaternion.Euler(0, 0, 0));
         stone.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-5.96f, -2.22f, -0.01f);
         GameObject stone5 = Instantiate(stonePrefab, position, Quaternion.Euler(0, 0, 0));
         stone.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
@@ -462,42 +469,42 @@ public class GameController : MonoBehaviour
         position = new Vector3(-9.72f, 5.44f, -0.10f);
         GameObject tree = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-4.24f, 4.61f, -0.10f);
         GameObject tree1 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree1.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(7.99f, 2.98f, -0.01f);
         GameObject tree2 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree2.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(4.47f, 4.9f, -0.01f);
         GameObject tree3 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree3.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(5.67f, -4.68f, -0.01f);
         GameObject tree4 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree4.transform.localScale = new Vector3(1, 1, 1);
-       
+        positions.Add(position);
 
         position = new Vector3(-9.9f, -4.75f, -0.01f);
         GameObject tree5 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree5.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(2.55f, -0.94f, -0.01f);
         GameObject tree6 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree6.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         position = new Vector3(-1.96f, -5.28f, -0.10f);
         GameObject tree7 = Instantiate(treePrefab, position, Quaternion.Euler(0, 0, 0));
         tree7.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
@@ -505,17 +512,17 @@ public class GameController : MonoBehaviour
         position = new Vector3(0.26f, -4.74f, -0.01f);
         GameObject volcano = Instantiate(volcanoPrefab, position, Quaternion.Euler(0, 0, 0));
         volcano.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
 
 
         position = new Vector3(10.85f, 5.3f, -0.01f);
         GameObject snowman = Instantiate(snowmanPrefab, position, Quaternion.Euler(0, 0, 0));
         snowman.transform.localScale = new Vector3(1, 1, 1);
-        
+        positions.Add(position);
 
         //Debug.Log(positions);
-        
+
 
 
     }
@@ -531,64 +538,95 @@ public class GameController : MonoBehaviour
 
 
 
+    //spawn bool:
+    bool PreventSpawnOverLap(Vector3 spawnPos)
+    {
+        colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            Vector3 centerPoint = colliders[i].bounds.center;
+            float widthLoc = colliders[i].bounds.extents.x;
+            float heightLoc = colliders[i].bounds.extents.y;
+
+            float leftExtend = centerPoint.x - widthLoc;
+            float rightExtend = centerPoint.x + widthLoc;
+            float lowerExtend = centerPoint.y - heightLoc;
+            float upperExtend = centerPoint.y + heightLoc;
+
+            if (spawnPos.x >= leftExtend  && spawnPos.x <= rightExtend)
+            {
+                if (spawnPos.y >= lowerExtend && spawnPos.y <= upperExtend)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+    
+    bool PreventOverlap(Vector3 spawnPos)
+    {
+        for (int i = 0; i < positions.Count; i++)
+        {
+            if(spawnPos.x > (positions[i].x + 3) &&  spawnPos.x < (positions[i].x - 3))
+            {
+                if(spawnPos.y > (positions[i].y + 2) && spawnPos.y < (positions[i].y - 2))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
 
 
 
 
     void CreateEgg(bool golden = false)
     {
+        
+        /*
         Vector3 position;
         position.x = -width + Random.Range(1f, (width*2)-2f);
         position.y = -height + Random.Range(1f, (height * 2) - 2f);
         position.z = -1f;
+        */
         Egg egg = null;
 
-        
-        /*
-        if (golden)
-        {
-            if (CollisionWithObstacle == false)
-                egg = Instantiate(goldEggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-            else
-            {
-                while (CollisionWithObstacle == true)
-                {
-                    position.x = -width + Random.Range(1f, (width * 2) - 2f);
-                    position.y = -height + Random.Range(1f, (height * 2) - 2f);
-                    position.z = -1f;
-                }
-                egg = Instantiate(goldEggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-            }
-        }
-            //egg = Instantiate(goldEggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-        else
-        {
-            if (CollisionWithObstacle == false)
-                egg = Instantiate(eggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-            else
-            {
-                while (CollisionWithObstacle == true)
-                {
-                    position.x = -width + Random.Range(1f, (width * 2) - 2f);
-                    position.y = -height + Random.Range(1f, (height * 2) - 2f);
-                    position.z = -1f;
-                }
-                egg = Instantiate(eggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-            }
-        }
-            //egg = Instantiate(eggPrefab, position, Quaternion.identity).GetComponent<Egg>();
-        */
 
+        // spawn:
+        Vector3 spawnPos = new Vector3(0, 0, 0);
+        bool canSpawnHere = false;
+
+
+        while (!canSpawnHere)
+        {
+            float spawnPosX = -width + Random.Range(1f, (width * 2) - 2f);
+            float spawnPosY = -height + Random.Range(1f, (height * 2) - 2f);
+
+            spawnPos = new Vector3(spawnPosX, spawnPosY, -1f);
+            canSpawnHere = PreventOverlap(spawnPos);
+
+            if (canSpawnHere)
+            {
+                break;
+            }
+
+        }
 
 
 
         if (golden)
         {
-             egg = Instantiate(goldEggPrefab, position, Quaternion.identity).GetComponent<Egg>(); 
+             egg = Instantiate(goldEggPrefab, spawnPos, Quaternion.identity).GetComponent<Egg>(); 
         }
         else
         {
-             egg = Instantiate(eggPrefab, position, Quaternion.identity).GetComponent<Egg>();
+             egg = Instantiate(eggPrefab, spawnPos, Quaternion.identity).GetComponent<Egg>();
         }
       
 
@@ -597,7 +635,7 @@ public class GameController : MonoBehaviour
         //positions.Add(position);
         currentEgg = egg;
 
-        eggPosition.transform.position = position;
+        eggPosition.transform.position = spawnPos;
 
     }
 

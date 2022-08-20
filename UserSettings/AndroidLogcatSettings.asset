@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "5200ae466052a523",
         "name": "com.GhostStarStudios.SnakeGame2D",
-        "processId": 17110,
+        "processId": 19648,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,12 @@
             "deviceId": "5200ae466052a523",
             "name": "com.GhostStarStudios.SnakeGame2D",
             "processId": 17110,
+            "exited": false
+        },
+        {
+            "deviceId": "5200ae466052a523",
+            "name": "com.GhostStarStudios.SnakeGame2D",
+            "processId": 19648,
             "exited": false
         }
     ],
